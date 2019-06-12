@@ -5,7 +5,7 @@
 A public GraphQL API for getting information about food hygiene ratings of restaurants in UK. 
 
 <p align="center">
-  <img width="460" height="300" src="https://media.giphy.com/media/jTT2I0ZHuzGlK495pI/giphy.gif">
+  <img width="640" height="480" src="https://media.giphy.com/media/jTT2I0ZHuzGlK495pI/giphy.gif">
 </p>
 
 The data provide the food hygiene rating or inspection result given to a business and reflect the standards of food hygiene found on the date of inspection or visit by the local authority. Businesses include restaurants, pubs, cafés, takeaways, hotels and other places consumers eat, as well as supermarkets and other food shops.
