@@ -4,10 +4,6 @@
 
 A public GraphQL API for getting information about food hygiene ratings of restaurants in UK. 
 
-<p align="center">
-  <video preload="auto" playsinline="" poster="https://pbs.twimg.com/tweet_video_thumb/D83RZQFWkAAmvfB.jpg" src="https://video.twimg.com/tweet_video/D83RZQFWkAAmvfB.mp4" type="video/mp4" style="width: 100%; height: 100%; position: absolute; background-color: black; top: 0%; left: 0%; transform: rotate(0deg) scale(1.005);"></video>
-</p>
-
 The data provide the food hygiene rating or inspection result given to a business and reflect the standards of food hygiene found on the date of inspection or visit by the local authority. Businesses include restaurants, pubs, cafés, takeaways, hotels and other places consumers eat, as well as supermarkets and other food shops.
 
 This project uses [Food Hygiene Rating Scheme API (Version 2)](http://api.ratings.food.gov.uk/help) as a data source, so the schema follows the shape of that data.
