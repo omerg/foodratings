@@ -6,7 +6,7 @@
   "author": "Omer Gurarslan",
   "license": "MIT",
   "scripts": {
-    "start": "node --inspect server/index.js",
+    "start": "node --inspect src/index.js",
     "build": "netlify-lambda build server"
   },
   "dependencies": {
