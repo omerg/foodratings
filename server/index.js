@@ -1,11 +1,11 @@
 const { GraphQLServer, GraphQLServerLambda } = require('graphql-yoga');
 
-const Query = require('./resolvers/Query');
-const Establishment = require('./resolvers/Establishment');
-const Rating = require('./resolvers/Rating');
-const Authority = require('./resolvers/Authority');
-const SchemeType = require('./resolvers/SchemeType');
-const BusinessType = require('./resolvers/BusinessType');
+const Query = require('../src/resolvers/Query');
+const Establishment = require('../src/resolvers/Establishment');
+const Rating = require('../src/resolvers/Rating');
+const Authority = require('../src/resolvers/Authority');
+const SchemeType = require('../src/resolvers/SchemeType');
+const BusinessType = require('../src/resolvers/BusinessType');
 
 const resolvers = {
     Query,
