@@ -1,0 +1,137 @@
+interface BaseResponse {
+    Message: String
+}
+
+type Query {
+    ratings: [Rating!]!
+    regions: [Region!]!
+    authorities(id: Int): [Authority!]!
+    businessTypes(id: Int): [BusinessType!]!
+    countries: [Country!]!
+    establishments(
+        id: Int
+        name: String,
+        address: String,
+        longitude: String,
+        latitude: String,
+        maxDistanceLimit: String
+        businessTypeId: Int
+        schemeTypeKey: String
+        ratingName: String
+        ratingOperatorKey: String
+        localAuthorityId: Int
+    ): [Establishment!]!
+    schemeTypes(id: Int): [SchemeType!]!
+    sortOptions: [SortOption!]!
+    scoreDescriptors: [ScoreDescriptor!]!
+    ratingOperators: [RatingOperator!]!
+}
+
+type Rating implements BaseResponse {
+    ratingId: Int!
+    ratingName: String!
+    ratingKey: String!
+    ratingKeyName: String!
+    schemeType: SchemeType!
+    Message: String
+}
+
+type Region implements BaseResponse {
+    id: Int!
+    name: String!
+    nameKey: String!
+    code: String!
+    Message: String
+}
+
+type Authority implements BaseResponse {
+    LocalAuthorityId: Int!
+    LocalAuthorityIdCode: String!
+    Name: String!
+    FriendlyName: String!
+    Url: String!
+    SchemeUrl: String!
+    Email: String!
+    RegionName: String!
+    FileName: String!
+    FileNameWelsch: String
+    EstablishmentCount: Int
+    CreationDate: String!
+    LastPublishedDate: String!
+    SchemeType: SchemeType!
+    Message: String
+}
+
+type BusinessType implements BaseResponse{
+    id: Int!
+    BusinessTypeName: String!
+    Message: String
+}
+
+type Country implements BaseResponse {
+    id: Int!
+    name: String!
+    nameKey: String!
+    code: String!
+    Message: String
+}
+
+type Establishment implements BaseResponse {
+    FHRSID: Int!
+    LocalAuthorityBusinessID: String!
+    BusinessName: String!
+    BusinessType: BusinessType!
+    AddressLine1: String!
+    AddressLine2: String!
+    AddressLine3: String!
+    AddressLine4: String!
+    PostCode: String!
+    Phone: String!
+    Rating: Rating
+    RatingDate: String!
+    LocalAuthority: Authority!
+    scores: Score!
+    SchemeType: SchemeType!
+    geocode: Geocode!
+    Message: String
+}
+
+type SchemeType {
+    id: Int!
+    schemeTypeName: String!
+    schemeTypeKey: String!
+    Message: String
+}
+
+type SortOption implements BaseResponse {
+    sortOptionId: Int!
+    sortOptionName: String!
+    sortOptionKey: String!
+    Message: String
+}
+
+type ScoreDescriptor implements BaseResponse {
+    Id: Int!
+    ScoreCategory: String!
+    Score: Int!
+    Description: String
+    Message: String
+}
+
+type RatingOperator implements BaseResponse {
+    ratingOperatorId: Int!
+    ratingOperatorName: String!
+    ratingOperatorKey: String!
+    Message: String
+}
+
+type Score {
+    Hygiene: Int
+    Structural: Int
+    ConfidenceInManagement: Int
+}
+
+type Geocode {
+    longitude: String
+    latitude: String
+}

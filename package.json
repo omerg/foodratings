@@ -1,0 +1,16 @@
+{
+  "name": "foodratings",
+  "version": "1.0.0",
+  "description": "A GraphQL API for UK Food Hygiene Rating Scheme (FHRS)",
+  "main": "index.js",
+  "author": "Omer Gurarslan",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --inspect src/index.js"
+  },
+  "dependencies": {
+    "dataloader": "^1.4.0",
+    "graphql-yoga": "^1.17.4",
+    "node-fetch": "^2.6.0"
+  }
+}
