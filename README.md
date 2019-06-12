@@ -12,7 +12,7 @@ This project uses [Food Hygiene Rating Scheme API (Version 2)](http://api.rating
 
 ```graphql
 query Establishment {
-  establishments(localAuthorityId: 195, ratingName: "", name: "Indian" address: "Darwen") {
+  establishments(localAuthorityId: 195, ratingName: "5", name: "Indian" address: "Darwen") {
     BusinessName
     BusinessType {
       BusinessTypeName
