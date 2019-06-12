@@ -1,4 +1,4 @@
-const { GraphQLServer } = require('graphql-yoga');
+const { GraphQLServer, GraphQLServerLambda } = require('graphql-yoga');
 
 const Query = require('./resolvers/Query');
 const Establishment = require('./resolvers/Establishment');
@@ -21,5 +21,10 @@ const server = new GraphQLServer({
     resolvers
 });
 
+const lambda = new GraphQLServerLambda({
+    typeDefs: './src/schema.graphql',
+    resolvers
+});
 
 server.start(() => console.log(`Server is running on http://localhost:4000`));
+exports.handler = lambda.handler;
